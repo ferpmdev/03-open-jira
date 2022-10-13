@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import { grey, red } from "@mui/material/colors";
+import { blue, blueGrey, grey, red } from "@mui/material/colors";
 
 export const lightTheme = createTheme({
   palette: {
@@ -17,5 +17,17 @@ export const lightTheme = createTheme({
       main: red.A400,
     },
   },
-  components: {},
+  components: {
+    MuiAppBar: {
+      defaultProps: {
+        elevation: 0,
+      },
+      styleOverrides: {
+        root: {
+          backgroundColor: grey[500],
+          color: blueGrey[700],
+        },
+      },
+    },
+  },
 });
